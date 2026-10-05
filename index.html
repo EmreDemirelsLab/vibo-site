@@ -3,43 +3,85 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vibo</title>
-<style>
-  :root { color-scheme: light dark; }
-  body {
-    margin: 0; min-height: 100vh; display: grid; place-items: center;
-    background: #0b0e17; color: #e8ebf4;
-    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    text-align: center; padding: 20px;
-  }
-  h1 { font-size: 40px; margin: 0; letter-spacing: -1px; }
-  .dot { color: #2de1d2; }
-  p { color: #8a93ab; }
-  a { color: #2de1d2; }
-  section { max-width: 560px; margin: 32px auto 0; text-align: left; font-size: 14px; color: #8a93ab; }
-  section h2 { font-size: 15px; color: #e8ebf4; }
-</style>
+<meta name="theme-color" content="#01010d">
+<title>Vibo — Bu gece hangi mekanda ne var?</title>
+<meta name="description" content="Vibo, bulunduğun şehirde bu gece hangi mekanda ne olduğunu gösterir: canlı müzik, DJ, etkinlik ve indirimler. Kullanıcılar için ücretsiz.">
+<link rel="icon" type="image/png" href="assets/icon-48.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-  <main>
-    <h1>vibo<span class="dot">.</span></h1>
-    <p>Bu gece hangi mekanda ne var? — Bodrum</p>
-    <p><a href="gizlilik-politikasi.html">Gizlilik Politikası</a> · <a href="kullanim-kosullari.html">Kullanım Koşulları</a> ·
-      <a href="kvkk-basvuru.html">KVKK Başvurusu</a> · <a href="hesap-silme.html">Hesap Silme</a> ·
-      <a href="#iletisim">İletişim</a></p>
-
-    <section id="iletisim">
-      <h2>İletişim ve tanıtıcı bilgiler</h2>
-      <p>Vibo, tüzel kişiliği olmayan bir ortaklık olarak aşağıdaki iki gerçek kişi tarafından işletilir:</p>
-      <p>Hilmi Emre Demirel — Akgedik Mah. Akgedik Cad. TOKİ Konutları 2. Etap 2. Kısım 96/B No: 303 Daire: 7 Yunusemre / Manisa —
-        <a href="mailto:h.emredemirel@gmail.com">h.emredemirel@gmail.com</a> — <a href="tel:+905543807886">+90 554 380 78 86</a><br>
-        Haktan Erdoğan — Arabacıalanı Mah. 1. Cad. No: 34B İç Kapı No: 1 Serdivan / Sakarya —
-        <a href="mailto:haktanerdogan1@gmail.com">haktanerdogan1@gmail.com</a> — <a href="tel:+905431455471">+90 543 145 54 71</a></p>
-      <p>Resmî yazışma ve bildirim adresi: <a href="mailto:h.emredemirel@gmail.com">h.emredemirel@gmail.com</a></p>
-      <p>Barındırma (yer sağlayıcı): Uygulama verileri, Hetzner Online GmbH'nin (Industriestr. 25, 91710 Gunzenhausen,
-        Almanya) Nürnberg veri merkezinde Vibo'nun kendi işlettiği sunucuda tutulur;
-        bu web sitesi GitHub Inc. (88 Colin P Kelly Jr St, San Francisco, CA 94107, ABD) üzerinde barındırılır.</p>
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html" aria-label="Vibo ana sayfa"><img src="assets/logo.svg" alt="Vibo" width="76" height="30"></a>
+    <nav class="site-nav" aria-label="Site"><a href="gizlilik-politikasi.html">Gizlilik</a><a href="kullanim-kosullari.html">Kullanım Koşulları</a><a href="kvkk-basvuru.html">KVKK Başvurusu</a><a href="hesap-silme.html">Hesap Silme</a><a href="iletisim.html">İletişim</a></nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <span class="chip">Bodrum · Çok yakında</span>
+        <h1>Bu gece hangi mekanda <span class="grad">ne var?</span></h1>
+        <p class="lead">Vibo, bulunduğun şehrin gece hayatını tek ekranda toplar: hangi mekanda canlı müzik var, kim sahne alıyor, nerede indirim var. Anlık ve tamamen ücretsiz.</p>
+        <div class="stores" aria-label="Mağazalar">
+          <div class="store"><small>Çok yakında</small><span>App Store</span></div>
+          <div class="store"><small>Çok yakında</small><span>Google Play</span></div>
+        </div>
+        <p class="note">Hesap açmadan kullanabilirsin. Ödeme yok, reklam takibi yok.</p>
+      </div>
+      <div class="hero-art"><img src="assets/hero.webp" width="900" height="506" alt="Bu gece nerede canlı müzik var?"></div>
     </section>
-  </main>
+
+    <section class="section" id="ozellikler">
+      <h2>Geceyi planlamanın en kısa yolu</h2>
+      <p class="sub">Mekanların kendi yayınladığı güncel bilgiler; aramakla, sormakla uğraşma.</p>
+      <div class="cards">
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg></div><h3>Bu Gece</h3><p>Şehrindeki mekanları ve etkinlikleri tarihe göre filtrele; bu akşam nerede ne olduğunu tek bakışta gör.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h3>Harita</h3><p>Mekanları haritada gör, sana en yakın olanları mesafeleriyle listele.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg></div><h3>Mekan detayları</h3><p>Fotoğraflar, adres, telefon, WhatsApp rezervasyon, Instagram ve yol tarifi tek sayfada.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8L3 12Z"/><circle cx="7.5" cy="8.5" r="1.3"/></svg></div><h3>Duyurular ve indirimler</h3><p>Mekanların yayınladığı fırsatları ve özel geceleri kaçırma.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div><h3>Arama</h3><p>Mekan, sanatçı, restoran veya müzik türü; hepsini tek yerden ara.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></div><h3>Bu gece nereye?</h3><p>Şehir bu gece nereye gidiyor: ankete oy ver, canlı sonucu gör.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="isletme">
+      <div class="band">
+        <div>
+          <h2>Mekan sahibi misin?</h2>
+          <p>İşletme girişiyle kendi panelinden etkinliklerini ve duyurularını dakikalar içinde yayınla, mekanını şehrine göster.</p>
+        </div>
+        <a class="btn" href="mailto:h.emredemirel@gmail.com?subject=Vibo%20i%C5%9Fletme%20ba%C5%9Fvurusu">Bizimle iletişime geç</a>
+      </div>
+    </section>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="inner">
+    <div>
+      <a class="logo" href="index.html" aria-label="Vibo ana sayfa"><img src="assets/logo.svg" alt="Vibo" width="66" height="26"></a>
+      <p>Bulunduğun şehirde bu gece hangi mekanda ne var? Canlı müzik, DJ, etkinlik ve fırsatlar tek ekranda.</p>
+    </div>
+    <div>
+      <h4>Yasal</h4>
+      <ul>
+        <li><a href="gizlilik-politikasi.html">Gizlilik Politikası ve Aydınlatma Metni</a></li>
+        <li><a href="kullanim-kosullari.html">Kullanım Koşulları</a></li>
+        <li><a href="kvkk-basvuru.html">KVKK Başvurusu</a></li>
+        <li><a href="hesap-silme.html">Hesap Silme</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>İletişim</h4>
+      <ul>
+        <li><a href="mailto:h.emredemirel@gmail.com">h.emredemirel@gmail.com</a></li>
+        <li><a href="iletisim.html">İletişim ve tanıtıcı bilgiler</a></li>
+        <li><a href="iletisim.html#isletme">Mekan sahipleri için</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="legal">© 2026 Vibo · Bodrum</div>
+</footer>
 </body>
 </html>

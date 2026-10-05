@@ -3,38 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#01010d">
 <title>Vibo — Kullanım Koşulları</title>
-<style>
-  :root {
-    color-scheme: light dark;
-    --bg: #fbfbfd; --text: #1c1f2a; --muted: #6a7080; --link: #0e8a7d;
-    --line: #dfe2ea; --soft: #f1f3f7; --head: #1c1f2a;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #0b0e17; --text: #e8ebf4; --muted: #8a93ab; --link: #4dd8c9;
-            --line: #252b3b; --soft: #141927; --head: #ffffff; }
-  }
-  body {
-    margin: 0; padding: 40px 16px 96px; background: var(--bg); color: var(--text);
-    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.6;
-  }
-  main { max-width: 760px; margin: 0 auto; }
-  h1 { font-size: 26px; margin: 0 0 4px; color: var(--head); }
-  h2 { font-size: 19px; margin: 32px 0 8px; color: var(--head); }
-  .muted { color: var(--muted); font-size: 14px; }
-  a { color: var(--link); }
-  ul, ol { padding-left: 22px; }
-  .box { background: var(--soft); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; }
-  .table-wrap { overflow-x: auto; }
-  table { border-collapse: collapse; width: 100%; font-size: 14px; }
-  th, td { border: 1px solid var(--line); padding: 8px; text-align: left; vertical-align: top; }
-  th { background: var(--soft); width: 38%; }
-  pre { white-space: pre-wrap; background: var(--soft); border: 1px solid var(--line); border-radius: 10px; padding: 12px; font-size: 14px; }
-</style>
+<meta name="description" content="Vibo uygulamasının kullanım koşulları ve işletme koşulları.">
+<link rel="icon" type="image/png" href="assets/icon-48.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<main>
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html" aria-label="Vibo ana sayfa"><img src="assets/logo.svg" alt="Vibo" width="76" height="30"></a>
+    <nav class="site-nav" aria-label="Site"><a href="gizlilik-politikasi.html">Gizlilik</a><a href="kullanim-kosullari.html" aria-current="page">Kullanım Koşulları</a><a href="kvkk-basvuru.html">KVKK Başvurusu</a><a href="hesap-silme.html">Hesap Silme</a><a href="iletisim.html">İletişim</a></nav>
+  </div>
+</header>
+<main class="doc">
   <h1>Vibo Kullanım Koşulları</h1>
   <p class="muted">Güncelleme tarihi: 25 Eylül 2026 · Sürüm 2026-09-25</p>
   <p class="box">Bu koşullar Vibo'yu kullananlar ile Vibo'yu işleten Emre Demirel ve Haktan Erdoğan arasındaki
@@ -128,11 +111,33 @@
   <h2 id="degisiklik">6. Değişiklikler ve iletişim</h2>
   <p>Bu koşullar değiştiğinde güncelleme tarihi değişir; önemli değişiklikler uygulama içinde duyurulur. İletişim:
   <a href="mailto:h.emredemirel@gmail.com">h.emredemirel@gmail.com</a>. Tanıtıcı bilgiler için
-  <a href="index.html#iletisim">İletişim</a>.</p>
-
-  <p class="muted"><a href="gizlilik-politikasi.html">Gizlilik Politikası ve Aydınlatma Metni</a> ·
-  <a href="kvkk-basvuru.html">KVKK Başvuru Formu</a> · <a href="hesap-silme.html">Hesap Silme</a> ·
-  <a href="kullanim-kosullari.html">Kullanım Koşulları</a> · <a href="index.html">Ana sayfa</a></p>
+  <a href="iletisim.html">İletişim</a>.</p>
 </main>
+<footer class="site-footer">
+  <div class="inner">
+    <div>
+      <a class="logo" href="index.html" aria-label="Vibo ana sayfa"><img src="assets/logo.svg" alt="Vibo" width="66" height="26"></a>
+      <p>Bulunduğun şehirde bu gece hangi mekanda ne var? Canlı müzik, DJ, etkinlik ve fırsatlar tek ekranda.</p>
+    </div>
+    <div>
+      <h4>Yasal</h4>
+      <ul>
+        <li><a href="gizlilik-politikasi.html">Gizlilik Politikası ve Aydınlatma Metni</a></li>
+        <li><a href="kullanim-kosullari.html">Kullanım Koşulları</a></li>
+        <li><a href="kvkk-basvuru.html">KVKK Başvurusu</a></li>
+        <li><a href="hesap-silme.html">Hesap Silme</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>İletişim</h4>
+      <ul>
+        <li><a href="mailto:h.emredemirel@gmail.com">h.emredemirel@gmail.com</a></li>
+        <li><a href="iletisim.html">İletişim ve tanıtıcı bilgiler</a></li>
+        <li><a href="iletisim.html#isletme">Mekan sahipleri için</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="legal">© 2026 Vibo · Bodrum</div>
+</footer>
 </body>
 </html>

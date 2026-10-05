@@ -3,41 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#01010d">
 <meta name="robots" content="noindex">
 <meta name="referrer" content="no-referrer">
 <title>Vibo — Şifre Sıfırlama</title>
-<style>
-  :root {
-    color-scheme: light dark;
-    --bg: #fbfbfd; --text: #1c1f2a; --muted: #6a7080; --link: #0e8a7d;
-    --line: #dfe2ea; --soft: #f1f3f7; --head: #1c1f2a; --err: #b3261e; --ok: #0e7a4d;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #0b0e17; --text: #e8ebf4; --muted: #8a93ab; --link: #4dd8c9;
-            --line: #252b3b; --soft: #141927; --head: #ffffff; --err: #ff8a80; --ok: #6fdcaa; }
-  }
-  body {
-    margin: 0; padding: 40px 16px 96px; background: var(--bg); color: var(--text);
-    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.6;
-  }
-  main { max-width: 520px; margin: 0 auto; }
-  h1 { font-size: 26px; margin: 0 0 4px; color: var(--head); }
-  .muted { color: var(--muted); font-size: 14px; }
-  a { color: var(--link); }
-  form { background: var(--soft); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: grid; gap: 12px; }
-  label { font-size: 14px; font-weight: 600; display: grid; gap: 4px; }
-  input { font: inherit; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--text); }
-  button { font: inherit; font-weight: 600; padding: 11px 14px; border-radius: 8px; border: 0; background: var(--link); color: #fff; cursor: pointer; }
-  button[disabled] { opacity: .6; cursor: default; }
-  .msg { margin: 0; font-size: 15px; }
-  .err { color: var(--err); }
-  .ok { color: var(--ok); }
-  [hidden] { display: none !important; }
-</style>
+<meta name="description" content="Vibo şifre sıfırlama sayfası.">
+<link rel="icon" type="image/png" href="assets/icon-48.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<main>
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html" aria-label="Vibo ana sayfa"><img src="assets/logo.svg" alt="Vibo" width="76" height="30"></a>
+  </div>
+</header>
+<main class="doc narrow">
   <h1>Vibo şifreni sıfırla</h1>
   <p class="muted">Bu sayfa yalnız Vibo'nun gönderdiği "şifre sıfırlama" e-postasındaki bağlantıyla çalışır.
   Bağlantı tek kullanımlıktır ve sınırlı bir süre geçerlidir. <span lang="en">(Reset your Vibo password: open this page
