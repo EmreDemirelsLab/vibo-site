@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#01010d">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>Vibo — E-posta Onayı</title>
+<meta name="description" content="Vibo e-posta onay sayfası.">
+<link rel="icon" type="image/png" href="assets/icon-48.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html" aria-label="Vibo ana sayfa"><img src="assets/logo.svg" alt="Vibo" width="76" height="30"></a>
+  </div>
+</header>
+<main class="doc narrow">
+  <div id="ok" hidden>
+    <h1>E-posta adresin onaylandı</h1>
+    <p class="msg ok" role="status">Hesabın hazır. Vibo uygulamasına dönüp e-postan ve şifrenle giriş yapabilirsin. Bu sayfayı kapatabilirsin.</p>
+  </div>
+  <div id="expired" hidden>
+    <h1>Bağlantı geçersiz</h1>
+    <p class="msg err" role="alert">Bu bağlantı daha önce kullanılmış veya süresi dolmuş. Hesabın zaten onaylıysa uygulamadan giriş yapabilirsin; değilse uygulamada yeniden kayıt olmayı dene, sana yeni bir onay e-postası göndeririz.</p>
+  </div>
+  <div id="plain" hidden>
+    <h1>E-posta onayı</h1>
+    <p>Bu sayfa, Vibo'nun gönderdiği onay e-postasındaki bağlantıyla açılır. Hesabını onaylamak için e-postandaki <strong>E-postamı onayla</strong> butonuna dokun.</p>
+  </div>
+  <p class="muted" style="margin-top:32px">Sorun olursa: <a href="mailto:admin@viboappturkey.com?subject=Vibo%20e-posta%20onay%C4%B1">admin@viboappturkey.com</a> ·
+  <a href="index.html">Ana sayfa</a></p>
+</main>
+<script>
+  // Onay bağlantısı bu sayfaya adres çubuğundaki "#" bölümünde bir oturum jetonuyla döner.
+  // Jeton kullanılmaz ve saklanmaz; sayfa açılır açılmaz adres çubuğundan ve geçmişten silinir.
+  (function () {
+    var hash = window.location.hash || "";
+    try { history.replaceState(null, "", window.location.pathname); } catch (e) {}
+    var show = function (id) { document.getElementById(id).hidden = false; };
+    if (/error(_code)?=/.test(hash)) show("expired");
+    else if (/access_token=|type=signup|type=email_change/.test(hash)) show("ok");
+    else show("plain");
+  })();
+</script>
+</body>
+</html>
